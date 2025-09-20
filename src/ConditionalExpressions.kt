@@ -1,8 +1,12 @@
 fun main() {
-    print("Введите ваш урон: ")
-    val a = readln().toInt()
-    print("Щит активен? (введите да или нет): ")
-    val shieldActive = readln()
-    val c = if (shieldActive == "да") a / 2 else a
-    print(c)
+    print("Введите ваш уровень: ")
+    val level = readln().toInt()
+    print("У вас есть VIP-статус? (true/false): ")
+    val hasVIP = readln().toBoolean()
+    if ((level >= 30 && hasVIP) || level >= 50) {
+        println("Доступ разрешен!")
+    }
+    else {
+        println("Доступ запрещен!")
+    }
 }
